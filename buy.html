@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy Now - EcoLife</title>
+  <link rel="stylesheet" href="buy.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>🛒 Buy Now</h2>
+    <form action="#" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+      
+      <label for="address">Shipping Address</label>
+      <textarea id="address" name="address" rows="4" required placeholder="Enter your full address"></textarea>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" name="payment" required>
+        <option value="">-- Select Payment Method --</option>
+        <option value="cod">Cash on Delivery</option>
+        <option value="upi">UPI</option>
+        <option value="card">Credit/Debit Card</option>
+        <option value="netbanking">Net Banking</option>
+      </select>
+
+      <button type="submit"><a href="confirm.html">Confirm Purchase</a></button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url('imgs/ind3.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.2); /* less transparent */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px); /* was 10px - now reduced blur */
+  padding: 30px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  max-width: 90%;
+  transition: 0.3s;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab button.active::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-box {
+  display: none;
+}
+
+.form-box.active {
+  display: block;
+}
+
+.form-box h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.form-box input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.form-box button:hover {
+  background-color: #218838;
+}
+
+.form-box p {
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+
+.form-box span {
+  color: #8cf;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #ffb3b3;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

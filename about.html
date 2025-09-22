@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | EcoLife</title>
+  <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🌱 EcoLife</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="connect.html">Connect</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <div class="about-content">
+      <div class="text">
+        <h2>About <span>EcoLife</span></h2>
+        <p>Founded in 2020, EcoLife emerged from a simple belief: sustainable living shouldn't be complicated or expensive.</p>
+
+        <div class="features">
+          <div class="feature">
+            <div class="icon">♻️</div>
+            <div>
+              <h4>Sustainability First</h4>
+              <p>Every product is evaluated for its environmental impact throughout its entire lifecycle.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="icon">🌍</div>
+            <div>
+              <h4>Global Impact</h4>
+              <p>We partner with suppliers who share our commitment to ethical and sustainable practices.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="icon">🤝</div>
+            <div>
+              <h4>Community Driven</h4>
+              <p>Our conscious community drives our product selection and values.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="imgs/ind3.jpg" alt="Eco bulb plant" />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Optional: animate features on scroll without external libraries
+    const features = document.querySelectorAll('.feature');
+
+    function animateOnScroll() {
+      features.forEach((feature) => {
+        const rect = feature.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          feature.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+  </script>
+
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h2 class="logo">🌱 EcoLife</h2>
+      <p>Making sustainable living accessible to everyone, one product at a time.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Newsletter</h3>
+      <p>Stay updated with eco-friendly tips and new products.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 EcoLife. All rights reserved. | Made with 💚 for the planet</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,305 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2f2f2f;
+  line-height: 1.6;
+  background: url("imgs/about1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Overlay to soften background image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent; /* fully transparent */
+  z-index: -1;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  background-color: #ffffff;
+  border-bottom: 2px solid #cdebd5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #2c9a4b;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #2c9a4b;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent stacking on small screens */
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  background: transparent; /* fully transparent */
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 2px solid #2c9a4b; /* green border */
+  box-shadow: none; /* remove shadow */
+}
+
+.about-content .text {
+  flex: 1 1 500px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  color: #ffffff; /* white for contrast */
+  margin-bottom: 1rem;
+}
+
+.about-content h2 span {
+  color: #2c9a4b;
+}
+
+.about-content p,
+.feature p {
+  font-size: 1.1rem;
+  color: #f1f1f1; /* light gray for readability */
+}
+
+
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.feature.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature .icon {
+  font-size: 1.5rem;
+  color: #267e3e;
+  flex-shrink: 0;
+}
+
+.feature h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  color: #2c9a4b;
+}
+
+.feature p {
+  color: white;
+}
+
+/* About Image */
+.about-content .image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-content .image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature h4 {
+  color: #b3ffbf; /* light green heading */
+}
+
+/* 4. Keep side-by-side layout on all screens */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: row; /* keep it side-by-side */
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .features {
+    align-items: flex-start;
+  }
+
+  .feature {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+
+
+
+/* Footer Styling */
+.footer {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 3rem 1.5rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 3rem; /* ⬅️ Adds spacing from above */
+  border-top: 1px solid #388e3c;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer h2.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  color: #d0e4d0;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #c8e6c9;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  flex: 1;
+  min-width: 200px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background-color: #66bb6a;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.newsletter-form button:hover {
+  background-color: #4caf50;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #4caf50;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  color: #c8e6c9;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
+}

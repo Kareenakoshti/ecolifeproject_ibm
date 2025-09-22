@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Sign Up</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="tab">
+      <button onclick="showForm('login')" id="loginBtn" class="active">Login</button>
+      <button onclick="showForm('signup')" id="signupBtn">Sign Up</button>
+    </div>
+
+    <div class="form-box active" id="loginForm">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email" id="loginEmail">
+      <input type="password" placeholder="Password" id="loginPassword">
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? Click <span onclick="showForm('signup')">Sign Up</span>.</p>
+    </div>
+
+    <div class="form-box" id="signupForm">
+      <h2>Sign Up</h2>
+      <input type="text" placeholder="Full Name" id="fullName">
+      <input type="email" placeholder="Email" id="signupEmail">
+      <input type="password" placeholder="Password" id="signupPassword">
+      <input type="password" placeholder="Confirm Password" id="confirmPassword">
+      <p id="error" class="error-message"></p>
+      <button onclick="register()">Register</button>
+      <p>Already have an account? Click <span onclick="showForm('login')">Login</span>.</p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

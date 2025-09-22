@@ -1,0 +1,265 @@
+/* blog.css */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('imgs/blog.jpg'); /* Replace with your actual image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #2f2f2f;
+}
+
+/* Header (optional light touch for contrast) */
+header {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #a3d9a5;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2f7030;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2f7030;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  background-color: #e1f6e5;
+}
+
+/* Blog Section */
+.blog-section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.blog-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #256d37;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Blog Card */
+.blog-card {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid #b6e2bd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(34, 139, 34, 0.1);
+  transition: transform 0.3s;
+}
+
+.blog-card:hover {
+  transform: scale(1.02);
+}
+
+/* Transparent Blog Images */
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.9;
+  border-bottom: 2px solid #a5d6a7;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Blog Info */
+.blog-info {
+  padding: 1rem;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.blog-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #2b5f3c;
+}
+
+.blog-snippet {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.blog-info button {
+  background-color: #378c4e;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.blog-info button:hover {
+  background-color: #2e6f3c;
+}
+
+
+
+
+/* Footer Styling */
+.footer {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 3rem 1.5rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 3rem; /* ⬅️ Adds spacing from above */
+  border-top: 1px solid #388e3c;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer h2.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  color: #d0e4d0;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #c8e6c9;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  flex: 1;
+  min-width: 200px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background-color: #66bb6a;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.newsletter-form button:hover {
+  background-color: #4caf50;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #4caf50;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  color: #c8e6c9;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
+}

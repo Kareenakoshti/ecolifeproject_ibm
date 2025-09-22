@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sustainable Living Blog | EcoLife</title>
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🌱 EcoLife</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a class="active" href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Connect</a></li>
+         <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="blog-section">
+    <h2>Sustainable Living Blog</h2>
+    <div class="blog-grid">
+
+      <!-- Blog Card 1 -->
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80" alt="Blog Cover">
+        <div class="blog-info">
+          <p class="blog-date">March 15, 2024</p>
+          <h3>10 Simple Steps to Zero Waste Living</h3>
+          <p class="blog-snippet">Discover practical ways to reduce waste in your daily life and make a positive environmental impact...</p>
+          <button onclick="readBlog(1)">Read More</button>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="blog-card">
+        <img src="imgs/clothes.webp" alt="Blog Cover">
+        <div class="blog-info">
+          <p class="blog-date">March 10, 2024</p>
+          <h3>Building a Sustainable Wardrobe</h3>
+          <p class="blog-snippet">Learn how to create a timeless, eco-friendly wardrobe that reflects your values and style...</p>
+          <button onclick="readBlog(2)">Read More</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function readBlog(id) {
+      // Save blog ID to localStorage and redirect
+      localStorage.setItem("blogId", id);
+      window.location.href = "blog-detail.html";
+    }
+  </script>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h2 class="logo">🌱 EcoLife</h2>
+      <p>Making sustainable living accessible to everyone, one product at a time.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Newsletter</h3>
+      <p>Stay updated with eco-friendly tips and new products.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 EcoLife. All rights reserved. | Made with 💚 for the planet</p>
+  </div>
+</footer>
+</body>
+</html>
